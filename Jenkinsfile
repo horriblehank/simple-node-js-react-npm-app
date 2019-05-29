@@ -15,6 +15,12 @@ pipeline {
                 bat 'npm run build'
             }
         }
+
+        stage('Echo out') {
+            steps {
+                bat 'npm run lintme'
+            }
+        }
         
         stage('Test') {
             steps {
